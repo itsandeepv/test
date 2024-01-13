@@ -1,0 +1,36 @@
+.tagImg {
+    height: 30px;
+    width: 30px;
+}
+
+.iImg {
+    height: 15px;
+    width: 15px;
+}
+
+.travelButton {
+    border: 1px solid #EFEFEF;
+    border-radius: 25px;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.mainContainer::-webkit-scrollbar{
+    display: none;
+}
+.mainContainer{
+    overflow-x: scroll;
+}
+.date-position{
+    position: relative;
+    bottom: 28px;
+}
+.expenseInsideBox{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    gap: 15px;
+    align-items: baseline;
+}

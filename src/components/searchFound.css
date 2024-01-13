@@ -1,0 +1,11 @@
+.bgimg{
+    height:40%;
+    width:40%;
+    margin-top: 10%;
+}
+.searchbg{
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items:center;
+}

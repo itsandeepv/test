@@ -1,0 +1,132 @@
+import React, { useEffect, useState } from "react";
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import { BrowserRouter as Router, Route, Routes, Link,useNavigate } from 'react-router-dom';
+import LoadingSpinner from "../../components/loader.tsx";
+import SearchFound from "../../components/searchFound.tsx";
+import { expenseUrl } from "../../service/url.js";
+import axios from "axios";
+import { useDispatch, useSelector } from 'react-redux';
+import { selectData } from '../../Redux/features/login/loginSlicer.js'
+import { toastContainer, notifySuccess, notifyWarning, notifyError } from '../../components/toast.js';
+import DataNotFound from "../../components/dataNotFound.tsx";
+const draftExpenseDetails = `Here are the details of your rejected expenses. You can view the reason for rejection by clicking on the "View Details" button.`
+
+
+export const RejectScreen = () => {
+    const [rejectData, setRejectData] = useState([])
+    const [loading, setLoading] = useState(true)
+    const loginStatus = useSelector(selectData);
+    const user_id = loginStatus.items[0]?.empcode
+    const navigate = useNavigate();
+
+    const navigateToDetails = (expenseID) => {
+        navigate('/expenseDetails', { state: { data: expenseID} })
+    }
+    const getRejectList = async () => {
+        const url = expenseUrl.initialUrl + expenseUrl.expenseRejectList
+        try {
+            setLoading(true)
+            const response = await axios.get(url, {
+                // params: {
+                //     user_id: '123'
+                // }
+                params: { user_id: user_id }
+            })
+            const Result = response?.data?.result
+            setRejectData(Result)
+            console.log('rejectlist:::::>>', Result)
+            setLoading(false)
+        } catch (error) {
+            console.log("getRejectList>>", error)
+            notifyError("Somethig went wrong!!")
+        }
+    }
+
+    useEffect(() => {
+        getRejectList()
+    }, [])
+    return (
+        <div>
+            {loading ?
+                <LoadingSpinner loading={loading} />
+                :
+                <div className='mt-20px'>
+
+                    {rejectData?.length === 0 || rejectData?.length == null ?
+                        <DataNotFound />
+                        :
+                        <div>
+                            <>
+                                <div className='d-flex m-10px textAlign-Start row mt-30px m-10px mb-1_5rem'>
+                                    <span className="bold1Rem commonBlackcolor">Rejected Expense Details - - &nbsp;</span> <span className="commonGraycolor light1Rem">{draftExpenseDetails}</span>
+                                </div>
+                            </>
+                            <TableContainer component={Paper}>
+                                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                                    <TableHead>
+                                        <TableRow>
+                                            <TableCell align="center"><div className="bold0_875Rem commonBlackcolor">Status</div></TableCell>
+                                            <TableCell align="center"><div className="bold0_875Rem commonBlackcolor">Start Date/End Date</div></TableCell>
+                                            <TableCell align="center"><div className="bold0_875Rem commonBlackcolor">Expense Type</div></TableCell>
+                                            <TableCell align="center"><div className="bold0_875Rem commonBlackcolor">Expense Description</div></TableCell>
+                                            <TableCell align="center"><div className="bold0_875Rem commonBlackcolor">Amount</div></TableCell>
+                                            <TableCell align="center"><div className="bold0_875Rem commonBlackcolor">Action</div></TableCell>
+                                        </TableRow>
+                                    </TableHead>
+                                    <TableBody>
+                                        {rejectData?.map((item: any) => (
+                                            <TableRow
+                                                key={item?.id}
+                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                            >
+                                                <TableCell align="left">
+                                                    <div className="d-flex row alignItem-center rejectCard justfyContent-center ">
+                                                        <div className="dotRed"></div>
+                                                        <div className="light0_875Rem commonGraycolor p-8px">{item?.status.charAt(0).toUpperCase() + item?.status.slice(1)}</div>
+                                                    </div>
+                                                </TableCell>
+                                                <TableCell component="th" scope="row" align="center" >
+                                                    <div className="light0_875Rem commonGraycolor">{item?.start_date}/{item?.end_date}</div>
+                                                </TableCell>
+                                                <TableCell align="center" ><div className="light0_875Rem commonGraycolor">{item?.expense_type}</div></TableCell>
+                                                <TableCell align="center"><div className="light0_875Rem commonGraycolor">{item?.rejected_reason}</div></TableCell>
+                                                <TableCell align="center"><div className="light0_875Rem commonGraycolor">{item?.total_amount}</div></TableCell>
+                                                <TableCell align="center">
+                                                    <div className="d-flex row justfyContent-center alignItem-center">
+                                                            <span className="commonGraycolor bold0_875Rem txtstyle curser"
+                                                            onClick={() => navigateToDetails(item?.id)}
+                                                            >View Details</span>
+                                                    </div>
+                                                </TableCell>
+                                            </TableRow>
+                                        ))}
+                                    </TableBody>
+                                </Table>
+                            </TableContainer>
+                        </div>
+                    }
+                    {
+                        rejectData?.length !== 0 &&
+                        <div className="d-flex row justfyContent-end mt-30px mb-30px">
+                            {/* <Stack spacing={5}>
+                                <Pagination count={10} variant="outlined" shape="rounded" showFirstButton showLastButton
+                                // className={classes.root}
+                                // page={page} onChange={handleChange}
+                                />
+                            </Stack> */}
+                        </div>
+                    }
+                </div>
+            }
+            {toastContainer()}
+        </div>
+    )
+}

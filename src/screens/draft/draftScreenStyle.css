@@ -1,0 +1,56 @@
+.actionButton {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+}
+
+.dotBlue {
+    height: 10px;
+    width: 10px;
+    background-color: #0080FC;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.dotOrange {
+    height: 10px;
+    width: 10px;
+    background-color: #FACC15;
+    border-radius: 5px;
+    margin: 2px;
+}
+.dotRed {
+    height: 10px;
+    width: 10px;
+    background-color: #EF4444;
+    border-radius: 5px;
+    margin: 2px;
+}
+.dotGreen {
+    height: 10px;
+    width: 10px;
+    background-color: #22C55E;
+    border-radius: 5px;
+    margin: 2px;
+}
+.draftCard {
+    background-color: #DBEEFF;
+    border-radius: 20px;
+    padding: 1px;
+}
+
+.pendingCard {
+    background-color: #FEF9C3;
+    border-radius: 20px;
+    padding: 1px;
+}
+.rejectCard {
+    background-color: #FEE2E2;
+    border-radius: 20px;
+    padding: 1px;
+}
+.approvalCard {
+    background-color: #DCFCE7;
+    border-radius: 20px;
+    padding: 1px;
+    padding-inline: 10px;
+}

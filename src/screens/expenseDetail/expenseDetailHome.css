@@ -1,0 +1,33 @@
+.activetab{
+    background-color: #027DC2;
+    color: #ffff;
+}
+.deActivetab{
+    background-color: transparent;
+    color: #18181B;
+}
+.tabSupport{
+    padding: 10px;
+    border-radius: 25px;
+}
+.bottomQuery{
+    background-color: #DBEEFF;
+    border-radius: 10px;
+}
+.customStyle{
+border-radius: 30px;
+background-color: red;
+}
+.queryinput{
+    border-radius: 10px;
+    border: none;
+}
+.sendBtn{
+    position: relative;
+    right: 35px;
+}
+.approve{
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}

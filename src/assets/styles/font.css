@@ -1,0 +1,270 @@
+.bold1Rem {
+    font-family: openSans-bold;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+.regular1Rem {
+    font-family: openSans-regular;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+.light1Rem {
+    font-family: openSans-light;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+
+.light0_813Rem {
+    font-family: openSans-light;
+    font-size: 0.813rem;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+
+.regular0_813Rem {
+    font-family: openSans-regular;
+    font-size: 0.813rem;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+
+.bold0_813Rem {
+    font-family: openSans-bold;
+    font-size: 0.813rem;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+
+.bold1_56Rem {
+    font-family: openSans-bold;
+    font-size: 1.563rem;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+}
+
+.bold2_75Rem {
+    font-family: openSans-bold;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0em;
+}
+
+.light1_375Rem {
+    font-family: openSans-light;
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+}
+
+.regular1_26Rem {
+    font-family: openSans-regular;
+    font-size: 1.26rem;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.bold1_26Rem {
+    font-family: openSans-bold;
+    font-size: 1.26rem;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.bold1_5Rem {
+    font-family: openSans-bold;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.regular1_26Rem {
+    font-family: openSans-regular;
+    font-size: 1.26rem;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.bold0_875Rem {
+    font-family: openSans-bold;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.bold1_87Rem {
+    font-family: openSans-bold;
+    font-size: 1.87rem;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.light0_875Rem {
+    font-family: openSans-light;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.regular-13px {
+    font-family: openSans-regular;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.regular-16px {
+    font-family: openSans-regular;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.regular0_875Rem {
+    font-family: openSans-regular;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.light0_65Rem {
+    font-family: openSans-light;
+    font-size: 0.65rem;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.regular0_65Rem {
+    font-family: openSans-regular;
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.regular0_75Rem {
+    font-family: openSans-regular;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+
+.lightgray {
+    background-color: #F4F4F4;
+}
+
+.commonGraycolor {
+    color: #71717A
+}
+
+.gray1 {
+    color: #78828E
+}
+
+.commonBlackcolor {
+    color: #18181B;
+}
+
+.flentBlack {
+    color: #202020
+}
+
+.darkBlack {
+    color: #010101;
+}
+
+.white {
+    color: white;
+}
+
+.fentBlack {
+    color: #202020
+}
+
+.commondarkgray {
+    color: #667085;
+}
+
+.mainColor {
+    color: #027DC2;
+}
+.mainbgColor {
+    background-color: #027DC2;
+}
+
+.commonBlue {
+    color: #027DC2;
+}
+
+.bgwhite {
+    background-color: #fff;
+}
+
+.redcolor {
+    background-color: #FFF2F2;
+}
+
+.txtstyle {
+    text-decoration: underline;
+}
+
+.darkred {
+    background-color: #EF4444;
+}
+
+.indigo {
+    color: #4F46E5;
+}
+
+@media (max-width: 425px) {
+    .light1_375Rem {
+        font-family: openSans-light;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+    }
+
+    .bold2_75Rem {
+        font-family: openSans-bold;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: 0em;
+    }
+}
+
+.customTitle {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+}
+.bg-white{
+    background-color: white;
+}

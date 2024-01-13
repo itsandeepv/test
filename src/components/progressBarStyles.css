@@ -1,0 +1,32 @@
+.positionItem {
+    position: absolute;
+    bottom: -30px;
+}
+
+.progress-wrapper {
+    display: inline-block;
+    background: #F4F4F4;
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+}
+
+.demo-css .progress-inner {
+    border-radius: 10px;
+    background: #f44;
+    height: 10px;
+    transition: width 400ms cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+
+.progress-info {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #999;
+}
+.test{
+    border-bottom: 2px dashed #ffff;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+}

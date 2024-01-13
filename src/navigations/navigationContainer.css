@@ -1,0 +1,118 @@
+.menuIcon {
+    width: 40%;
+}
+
+.statusBox {
+    height: 5vh !important;
+}
+
+.iconColor {
+    background-color: aqua;
+}
+
+.divider {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+.logo {
+    width: 60px;
+    height: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.inside {
+    margin-left: 240px;
+    margin-right: 20px;
+    /* width: 76vw; */
+    /* width: 70%; */
+    /* width: 80vw; */
+    /* width: 95vw; */
+}
+
+@media (max-width: 600px) {
+    .inside {
+        /* width: 100vw; */
+        /* width: 93vw; */
+        width: 90vw;
+        margin-left: 0px;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .divider{
+        display: none;
+    }
+}
+
+@media (max-width: 949px) {
+    .displayAddExpense {
+        display: none;
+    }
+}
+
+.addExpenseButton {
+    background: linear-gradient(to right, #1F3B90, #027DC2);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+
+.adminMenu {
+    padding-top: 0px !important;
+    border-radius: 10px;
+    border-bottom: 1px solid #027DC2;
+    cursor: pointer;
+}
+
+.adminText:hover {
+    /* background-color: rgb(143, 143, 242); */
+    border-radius: 10px;
+}
+
+.menuText:hover {
+    color: #027DC2;
+}
+
+.adminMenuFlex {
+    align-items: flex-end !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.adminLine {
+    width: 30%;
+}
+
+.adminText {
+    width: 70%;
+    position: relative;
+    bottom: 0px;
+}
+
+.adminMenuWidth {
+    width: 90%;
+}
+
+.vertical {
+    border-left: 1px solid #667085;
+    height: 30px;
+}
+
+.horizontal {
+    width: 30px;
+    border-bottom: 1px solid black;
+}
+
+.horizontal-line {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+}
+
+.vertical-line-last {
+    position: relative;
+    bottom: 24px;
+}

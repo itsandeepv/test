@@ -1,0 +1,83 @@
+.d-flex {
+    display: flex;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evennly {
+    justify-content: space-evenly;
+}
+
+.alignItem-center {
+    align-items: center;
+}
+
+.alignItem-baseline {
+    align-items: baseline;
+}
+
+.alignItem-start {
+    align-items: start;
+}
+
+.alignItem-end {
+    align-items: end;
+}
+
+.justfyContent-center {
+    justify-content: center;
+}
+
+.justfyContent-start {
+    justify-content: left;
+}
+
+.justfyContent-end {
+    justify-content: right;
+}
+.justfyContentend {
+    justify-content: end;
+}
+.textAlign-Center {
+    text-align: center;
+}
+
+.textAlign-Start {
+    text-align: start;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.position{
+    position: absolute;
+}
+.overflow{
+    overflow-x: scroll;
+}
+.overflow::-webkit-scrollbar{
+    display: none;
+}
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+    

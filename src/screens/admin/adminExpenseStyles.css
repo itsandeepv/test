@@ -1,0 +1,48 @@
+.table-column {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.popUp-cross {
+    width: 35px;
+}
+
+.deleteButton {
+    height: 70px;
+    width: 70px;
+}
+
+.policyStyle {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.257);
+    width: 30%;
+    padding: 15px;
+}
+
+.localBg {
+    background-color: #F4F4F4;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+.autoSelectLabel {
+    font-family: openSans-regular !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 26px !important;
+    letter-spacing: 0px !important;
+    color: #202020 !important;
+}
+.subExpenseIcon{
+    height: 40px;
+    width: 40px;
+    border-radius: 60px;
+}
+.imgBg{
+    height: 20px;
+    width: 20px;
+    /* border-radius: 15px; */
+}
+
+.tableBorder{
+    border: 1px solid #78828E;
+}
